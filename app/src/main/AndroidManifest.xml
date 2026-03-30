@@ -157,11 +157,6 @@
             android:exported="false"
             android:foregroundServiceType="location" />
 
-        <!-- Google Maps API Key -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBtXYjljSgtSpCHkjykDtMj38LToFzzSZc" />
-
     </application>
 
 </manifest>
