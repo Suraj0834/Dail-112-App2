@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Application Theme - Dark -->
+    <style name="Theme.Dial112" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorPrimaryContainer">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/text_on_primary</item>
+        
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorSecondaryContainer">@color/surface_elevated</item>
+        <item name="colorOnSecondary">@color/primary_dark</item>
+        <item name="colorOnSecondaryContainer">@color/text_primary</item>
+        
+        <!-- Tertiary Colors -->
+        <item name="colorTertiary">@color/info_blue</item>
+        <item name="colorTertiaryContainer">@color/surface_elevated</item>
+        <item name="colorOnTertiary">@color/text_on_primary</item>
+        <item name="colorOnTertiaryContainer">@color/text_primary</item>
+        
+        <!-- Error Colors -->
+        <item name="colorError">@color/emergency_red</item>
+        <item name="colorErrorContainer">@color/emergency_red_dark</item>
+        <item name="colorOnError">@color/text_on_primary</item>
+        <item name="colorOnErrorContainer">@color/text_on_primary</item>
+        
+        <!-- Background Colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        
+        <!-- Surface Colors -->
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurfaceVariant">@color/surface_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        
+        <!-- Outline -->
+        <item name="colorOutline">@color/border</item>
+        <item name="colorOutlineVariant">@color/divider</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/surface_card</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Ripple -->
+        <item name="android:colorControlHighlight">@color/ripple_light</item>
+
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Dial112.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Dial112.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Dial112.LargeComponent</item>
+    </style>
+    
+    <!-- Splash Theme -->
+    <style name="Theme.Dial112.Splash" parent="Theme.Dial112">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+    </style>
+    
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.Dial112.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_sm</item>
+    </style>
+    
+    <style name="ShapeAppearance.Dial112.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_lg</item>
+    </style>
+    
+    <style name="ShapeAppearance.Dial112.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_xl</item>
+    </style>
+</resources>

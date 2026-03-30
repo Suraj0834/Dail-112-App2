@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_case_item_card"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Header Row: Case ID and Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <!-- Case Icon -->
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circle_blue">
+
+            <ImageView
+                android:id="@+id/ivCategoryIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_folder"
+                android:contentDescription="Case"
+                app:tint="@color/text_white"
+                tools:src="@drawable/ic_folder" />
+        </FrameLayout>
+
+        <!-- Case ID -->
+        <TextView
+            android:id="@+id/tvCaseId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CASE #2024-042"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_white"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.05"
+            android:layout_marginStart="12dp"
+            tools:text="CASE #2024-042" />
+
+        <!-- Status Badge -->
+        <LinearLayout
+            android:id="@+id/statusBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_status_badge_active"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#F97316"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.08"
+                tools:text="ACTIVE" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Case Title -->
+    <TextView
+        android:id="@+id/tvCaseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Theft Report - Downtown Area"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="Vehicle Theft Report - Downtown Area" />
+
+    <!-- Case Category/Type -->
+    <TextView
+        android:id="@+id/tvCaseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theft • Vehicle"
+        android:textSize="13sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="12dp"
+        tools:text="Theft • Vehicle" />
+
+    <!-- Info Row: Location and Date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Location -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location"
+                android:contentDescription="Location"
+                app:tint="#64748B" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Market St, Downtown"
+                android:textSize="12sp"
+                android:textColor="#94A3B8"
+                android:layout_marginStart="6dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Market St, Downtown" />
+        </LinearLayout>
+
+        <!-- Date -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_clock"
+                android:contentDescription="Time"
+                app:tint="#64748B" />
+
+            <TextView
+                android:id="@+id/tvCaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 days ago"
+                android:textSize="12sp"
+                android:textColor="#94A3B8"
+                android:layout_marginStart="6dp"
+                tools:text="2 days ago" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#334155"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Footer Row: Officer and Priority -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Assigned Officer -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivOfficerAvatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bg_avatar_ai"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#3B82F6" />
+
+            <TextView
+                android:id="@+id/tvOfficerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Officer Khan"
+                android:textSize="12sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Officer Khan" />
+        </LinearLayout>
+
+        <!-- Priority Indicator -->
+        <LinearLayout
+            android:id="@+id/priorityContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_priority_high"
+                android:contentDescription="Priority"
+                app:tint="#DC2626" />
+
+            <TextView
+                android:id="@+id/tvPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HIGH"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#DC2626"
+                android:layout_marginStart="4dp"
+                tools:text="HIGH" />
+        </LinearLayout>
+
+        <!-- View Details Arrow -->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_chevron_right"
+            android:contentDescription="View Details"
+            app:tint="#64748B"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

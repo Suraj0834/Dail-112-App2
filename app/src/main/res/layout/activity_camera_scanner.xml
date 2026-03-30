@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_dark">
+
+    <!-- Camera Preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top Overlay -->
+    <LinearLayout
+        android:id="@+id/topOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_top_overlay"
+        android:padding="@dimen/padding_screen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/bg_button_circle_dark"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="@string/btn_back"
+                app:tint="@color/text_on_primary" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/spacing_lg"
+                android:gravity="center"
+                android:text="@string/camera_face_recognition"
+                android:textAppearance="@style/TextAppearance.Dial112.TitleLarge"
+                android:textColor="@color/text_on_primary" />
+
+            <ImageButton
+                android:id="@+id/btnFlash"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/bg_button_circle_dark"
+                android:src="@drawable/ic_flash_off"
+                android:contentDescription="@string/camera_flash"
+                app:tint="@color/text_on_primary" />
+        </LinearLayout>
+
+        <!-- Mode Tabs -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:background="@drawable/bg_tab_container"
+            app:tabIndicatorColor="@color/primary"
+            app:tabSelectedTextColor="@color/text_on_primary"
+            app:tabTextColor="@color/text_secondary"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="3dp"
+            app:tabRippleColor="@color/ripple_light">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Face" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANPR" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weapon" />
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
+    <!-- Scanner Frame -->
+    <FrameLayout
+        android:id="@+id/scannerFrame"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Corner Markers -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/scanner_frame" />
+
+        <!-- Scanning Line Animation -->
+        <View
+            android:id="@+id/scanLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="top"
+            android:background="@color/primary"
+            android:alpha="0.8" />
+    </FrameLayout>
+
+    <!-- Status Indicator -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardStatus"
+        style="@style/Widget.Dial112.Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        app:cardCornerRadius="@dimen/radius_full"
+        app:cardBackgroundColor="@color/surface_card"
+        app:layout_constraintTop_toBottomOf="@id/scannerFrame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/spacing_lg"
+            android:paddingVertical="@dimen/spacing_sm">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressScanning"
+                android:layout_width="@dimen/icon_sm"
+                android:layout_height="@dimen/icon_sm"
+                android:indeterminate="true"
+                app:indicatorColor="@color/primary"
+                app:trackColor="@color/divider"
+                app:indicatorSize="20dp"
+                app:trackThickness="2dp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:text="@string/camera_scanning"
+                android:textAppearance="@style/TextAppearance.Dial112.BodyMedium"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_bottom_overlay"
+        android:padding="@dimen/padding_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Control Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Gallery Button -->
+            <FrameLayout
+                android:id="@+id/btnGallery"
+                android:layout_width="@dimen/button_height_large"
+                android:layout_height="@dimen/button_height_large"
+                android:background="@drawable/bg_button_circle_dark"
+                android:layout_marginEnd="@dimen/spacing_xxxl">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_md"
+                    android:layout_height="@dimen/icon_md"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gallery"
+                    android:contentDescription="@string/camera_gallery"
+                    app:tint="@color/text_on_primary" />
+            </FrameLayout>
+
+            <!-- Capture Button -->
+            <FrameLayout
+                android:id="@+id/btnCapture"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/bg_capture_button">
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_capture_button_inner" />
+            </FrameLayout>
+
+            <!-- Switch Camera Button -->
+            <FrameLayout
+                android:id="@+id/btnSwitchCamera"
+                android:layout_width="@dimen/button_height_large"
+                android:layout_height="@dimen/button_height_large"
+                android:background="@drawable/bg_button_circle_dark"
+                android:layout_marginStart="@dimen/spacing_xxxl">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_md"
+                    android:layout_height="@dimen/icon_md"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_camera_switch"
+                    android:contentDescription="@string/camera_switch"
+                    app:tint="@color/text_on_primary" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Instructions -->
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="Position face within the frame"
+            android:textAppearance="@style/TextAppearance.Dial112.BodyMedium"
+            android:textColor="@color/text_secondary"
+            android:alpha="0.8" />
+    </LinearLayout>
+
+    <!-- Match Result Card (Hidden by default) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardResult"
+        style="@style/Widget.Dial112.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_screen"
+        android:layout_marginBottom="@dimen/spacing_lg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottomControls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/spacing_lg">
+
+            <!-- Result Icon -->
+            <FrameLayout
+                android:id="@+id/resultIconContainer"
+                android:layout_width="@dimen/icon_xl"
+                android:layout_height="@dimen/icon_xl"
+                android:background="@drawable/bg_icon_container_success">
+
+                <ImageView
+                    android:id="@+id/ivResultIcon"
+                    android:layout_width="@dimen/icon_md"
+                    android:layout_height="@dimen/icon_md"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check"
+                    android:contentDescription="@null"
+                    app:tint="@color/success_green" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvResultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/camera_match_found"
+                    android:textAppearance="@style/TextAppearance.Dial112.TitleMedium"
+                    android:textColor="@color/success_green" />
+
+                <TextView
+                    android:id="@+id/tvResultDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:text="Rajesh Kumar - Wanted"
+                    android:textAppearance="@style/TextAppearance.Dial112.BodyMedium" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewDetails"
+                style="@style/Widget.Dial112.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

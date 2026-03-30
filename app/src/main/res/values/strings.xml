@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dial 112</string>
+    <string name="app_tagline">Police Response System</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_loading">Loading secure connection…</string>
+    <string name="splash_version">Version 1.0.0</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to access emergency services</string>
+    <string name="login_email_label">Email Address</string>
+    <string name="login_email_hint">Enter your email</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_hint">Enter your password</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_button">Sign In</string>
+    <string name="login_biometric">Or sign in with biometrics</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_register">Register</string>
+    <string name="login_citizen">Citizen Login</string>
+    <string name="login_police">Police Login</string>
+    
+    <!-- Home Screen - Citizen -->
+    <string name="home_greeting">Hello, %1$s</string>
+    <string name="home_greeting_default">Hello, Citizen</string>
+    <string name="home_subtitle">Your safety is our priority</string>
+    <string name="home_sos_title">SOS Emergency</string>
+    <string name="home_sos_subtitle">Tap for immediate help</string>
+    <string name="home_quick_actions">Quick Actions</string>
+    <string name="home_file_complaint">File Complaint</string>
+    <string name="home_track_case">Track Case</string>
+    <string name="home_ai_assistant">AI Assistant</string>
+    <string name="home_nearby_stations">Nearby Stations</string>
+    <string name="home_recent_cases">Recent Cases</string>
+    <string name="home_view_all">View All</string>
+    <string name="home_emergency_numbers">Emergency Numbers</string>
+    
+    <!-- SOS Screen -->
+    <string name="sos_title">SOS Emergency</string>
+    <string name="sos_instruction">Press and hold for 3 seconds</string>
+    <string name="sos_button_text">SOS</string>
+    <string name="sos_sending">Sending SOS Alert…</string>
+    <string name="sos_sent">Alert Sent Successfully</string>
+    <string name="sos_help_arriving">Help is on the way!</string>
+    <string name="sos_cancel">Cancel SOS</string>
+    <string name="sos_location">Your Location</string>
+    <string name="sos_location_detected">Location Detected</string>
+    <string name="sos_share_live">Share Live Location</string>
+    <string name="sos_call_police">Call Police</string>
+    <string name="sos_estimated_time">Estimated Response Time</string>
+    <string name="sos_minutes">%1$d min</string>
+    
+    <!-- Chat Screen -->
+    <string name="chat_title">AI Assistant</string>
+    <string name="chat_subtitle">How can I help you today?</string>
+    <string name="chat_input_hint">Type your message…</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_voice">Voice Input</string>
+    <string name="chat_quick_help">Quick Help</string>
+    <string name="chat_report_crime">Report a Crime</string>
+    <string name="chat_find_station">Find Station</string>
+    <string name="chat_legal_help">Legal Help</string>
+    <string name="chat_documents">Documents</string>
+    
+    <!-- Police Home Screen -->
+    <string name="police_greeting">Officer %1$s</string>
+    <string name="police_status_active">On Duty</string>
+    <string name="police_status_offline">Off Duty</string>
+    <string name="police_live_sos">Live SOS Alerts</string>
+    <string name="police_no_alerts">No active alerts</string>
+    <string name="police_respond">Respond</string>
+    <string name="police_assigned_cases">Assigned Cases</string>
+    <string name="police_stats">Today\'s Statistics</string>
+    <string name="police_cases_resolved">Cases Resolved</string>
+    <string name="police_sos_responded">SOS Responded</string>
+    <string name="police_km_patrolled">Km Patrolled</string>
+    <string name="police_ai_tools">AI Tools</string>
+    <string name="police_face_scan">Face Scan</string>
+    <string name="police_anpr">ANPR</string>
+    <string name="police_weapon_detect">Weapon Detect</string>
+    <string name="police_reports">Reports</string>
+    
+    <!-- Camera/Scanner Screen -->
+    <string name="camera_title">AI Scanner</string>
+    <string name="camera_face_recognition">Face Recognition</string>
+    <string name="camera_anpr">License Plate Scanner</string>
+    <string name="camera_weapon">Weapon Detection</string>
+    <string name="camera_scanning">Scanning…</string>
+    <string name="camera_match_found">Match Found</string>
+    <string name="camera_no_match">No Match</string>
+    <string name="camera_confidence">Confidence: %1$d%%</string>
+    <string name="camera_capture">Capture</string>
+    <string name="camera_gallery">Gallery</string>
+    <string name="camera_flash">Flash</string>
+    <string name="camera_switch">Switch Camera</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_cases">Cases</string>
+    <string name="nav_sos">SOS</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_scanner">Scanner</string>
+    <string name="nav_alerts">Alerts</string>
+    
+    <!-- Common -->
+    <string name="btn_continue">Continue</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_save">Save</string>
+    <string name="loading">Loading…</string>
+    <string name="error_generic">Something went wrong</string>
+    <string name="error_network">No internet connection</string>
+    
+    <!-- Case Status -->
+    <string name="case_status_active">Active</string>
+    <string name="case_status_pending">Pending</string>
+    <string name="case_status_resolved">Resolved</string>
+    <string name="case_status_closed">Closed</string>
+    
+    <!-- Emergency Numbers -->
+    <string name="emergency_police">Police</string>
+    <string name="emergency_ambulance">Ambulance</string>
+    <string name="emergency_fire">Fire</string>
+    <string name="emergency_women">Women Helpline</string>
+    <string name="number_police">100</string>
+    <string name="number_ambulance">108</string>
+    <string name="number_fire">101</string>
+    <string name="number_women">1091</string>
+
+    <!-- Sign Up / Registration -->
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_full_name">Enter your full name</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter your email address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_phone">Enter your phone number</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Create a password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="agree_terms">I agree to Terms of Service and Privacy Policy</string>
+
+    <!-- OTP Verification -->
+    <string name="verify_phone">Verify Your Phone</string>
+    <string name="enter_otp_sent">Enter the 6-digit code sent to your phone</string>
+    <string name="did_not_receive">Didn\'t receive code?</string>
+    <string name="resend">Resend</string>
+    <string name="resend_in_60">Resend in 60 seconds</string>
+    <string name="verify">Verify</string>
+
+    <!-- Profile & Settings -->
+    <string name="profile_settings">Profile &amp; Settings</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="edit">Edit</string>
+    <string name="settings">Settings</string>
+    <string name="receive_push_notifications">Receive push notifications</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="always_on">Always on</string>
+    <string name="logout">Logout</string>
+
+    <!-- Case History -->
+    <string name="case_history">Case History</string>
+    <string name="all">All</string>
+    <string name="pending">Pending</string>
+    <string name="resolved">Resolved</string>
+    <string name="case_details">Case Details</string>
+    <string name="case_information">Case Information</string>
+    <string name="case_type">Case Type</string>
+    <string name="category">Category</string>
+    <string name="location">Location</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="description">Description</string>
+    <string name="assigned_officer">Assigned Officer</string>
+    <string name="officer">Officer</string>
+    <string name="call">Call</string>
+
+    <!-- Map & Location -->
+    <string name="google_maps_placeholder">Google Maps View</string>
+    <string name="search">Search</string>
+    <string name="distance">Distance</string>
+    <string name="estimated_time">Estimated Time</string>
+    <string name="directions">Directions</string>
+
+    <!-- Notifications -->
+    <string name="notification">Notification</string>
+    <string name="clear_all">Clear All</string>
+
+    <!-- Emergency Contacts -->
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="add">Add</string>
+    <string name="system_emergency">System Emergency Numbers</string>
+    <string name="police">Police</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="fire">Fire</string>
+    <string name="personal_contacts">Personal Contacts</string>
+    <string name="contact">Contact</string>
+    <string name="delete">Delete</string>
+
+    <!-- Help & FAQ -->
+    <string name="help_faq">Help &amp; FAQ</string>
+    <string name="search_faqs">Search FAQs…</string>
+    <string name="expand">Expand</string>
+
+    <!-- Feedback -->
+    <string name="send_feedback">Send Feedback</string>
+    <string name="feedback_type">Feedback Type</string>
+    <string name="rate_experience">Rate Your Experience</string>
+    <string name="your_feedback">Your Feedback</string>
+    <string name="tell_us_more">Tell us what you think…</string>
+    <string name="submit_feedback">Submit Feedback</string>
+
+    <!-- Admin/Dispatcher -->
+    <string name="dispatch_center">Dispatch Center</string>
+    <string name="active_cases">Active Cases</string>
+    <string name="available_officers">Available Officers</string>
+    <string name="avg_response_time">Avg Response Time</string>
+    <string name="live_dispatch_map">Live Dispatch Map</string>
+    <string name="active_sos_alerts">Active SOS Alerts</string>
+    <string name="case_management">Case Management</string>
+    <string name="case_new">New</string>
+    <string name="assigned">Assigned</string>
+    <string name="trending">Trending</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="verification">Verification</string>
+
+    <!-- Citizen Home -->
+    <string name="sos">SOS Emergency Button</string>
+    <string name="good_morning">Good Morning,</string>
+    <string name="quick_actions">QUICK ACTIONS</string>
+    <string name="file_fir">File FIR</string>
+    <string name="my_cases">My Cases</string>
+    <string name="crime_map">Crime Map</string>
+    <string name="ai_chat">AI Chat</string>
+    <string name="my_recent_cases">MY RECENT CASES</string>
+    <string name="view_all">View All →</string>
+    <string name="no_recent_cases">No recent cases</string>
+    <string name="sos_hold_instruction">Hold for 3 seconds to trigger</string>
+    <string name="default_location">📍 New Delhi, India</string>
+
+    <!-- Police Home -->
+    <string name="duty_dashboard">DUTY DASHBOARD</string>
+    <string name="badge_id">Badge ID: %1$s</string>
+    <string name="live_sos_alerts">LIVE SOS ALERTS</string>
+    <string name="active_count">%1$d Active</string>
+    <string name="no_active_sos">No active SOS alerts</string>
+    <string name="quick_tools">QUICK TOOLS</string>
+    <string name="criminal_search">Criminal\nSearch</string>
+    <string name="criminal_ai">Criminal\nAI</string>
+    <string name="pcr_van">PCR Van</string>
+    <string name="my_assigned_cases">MY ASSIGNED CASES</string>
+    <string name="no_assigned_cases">No assigned cases</string>
+    <string name="respond_now">RESPOND NOW</string>
+    <string name="emergency_prefix">EMERGENCY</string>
+    <string name="mins_ago">%1$d mins ago</string>
+
+    <!-- Admin Dashboard -->
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="key_metrics">Key Metrics</string>
+    <string name="sos_today">SOS Today</string>
+    <string name="officers_on_duty">Officers On Duty</string>
+    <string name="criminal_records">Criminal Records</string>
+    <string name="resolved_this_month">Resolved This Month</string>
+    <string name="performance_charts">Performance Charts</string>
+    <string name="monthly_trends">Monthly Trends</string>
+    <string name="crime_distribution">Crime Distribution</string>
+    <string name="resolution_rate">Resolution Rate</string>
+    <string name="officer_status">Officer Status</string>
+    <string name="on_duty">On Duty</string>
+    <string name="off_duty">Off Duty</string>
+    <string name="deployment_rate">Deployment Rate</string>
+    <string name="system_health">System Health</string>
+    <string name="backend_api">Backend API</string>
+    <string name="ai_services">AI Services</string>
+    <string name="socket_server">Socket Server</string>
+    <string name="operational">Operational</string>
+    <string name="degraded">Degraded</string>
+    <string name="uptime">Uptime</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="auto_refresh">Auto-refresh enabled</string>
+    <string name="cases_vs_resolved">Cases vs Resolved</string>
+    <string name="new_cases">New Cases</string>
+    <string name="resolved_cases">Resolved Cases</string>
+
+    <!-- Case Details -->
+    <string name="priority">Priority</string>
+    <string name="high_priority">High Priority</string>
+    <string name="medium_priority">Medium Priority</string>
+    <string name="low_priority">Low Priority</string>
+    <string name="reported_by">Reported By</string>
+    <string name="evidence">Evidence</string>
+    <string name="attached_files">Attached Files</string>
+    <string name="timeline">Timeline</string>
+    <string name="updates">Updates</string>
+    <string name="view_on_map">View on Map</string>
+    <string name="update_status">Update Status</string>
+    <string name="add_note">Add Note</string>
+    <string name="share_case">Share Case</string>
+    <string name="assign_officer">Assign Officer</string>
+    <string name="case_created">Case Created</string>
+    <string name="case_assigned">Case Assigned</string>
+    <string name="case_updated">Case Updated</string>
+    <string name="case_closed">Case Closed</string>
+    <string name="activity_log">Activity Log</string>
+    <string name="related_cases">Related Cases</string>
+    <string name="contact_officer">Contact Officer</string>
+    <string name="send_message">Send Message</string>
+    <string name="no_evidence">No evidence uploaded yet</string>
+    <string name="no_updates">No updates available</string>
+
+    <!-- Case History -->
+    <string name="total_cases">Total Cases</string>
+    <string name="active_cases_count">Active Cases</string>
+    <string name="resolved_30d">Resolved (30d)</string>
+    <string name="search_cases">Search case ID, location, or type...</string>
+    <string name="no_cases_found">No cases found</string>
+    <string name="pull_to_refresh">Pull to refresh</string>
+    <string name="filter_by">Filter By</string>
+    <string name="sort_by">Sort By</string>
+    <string name="newest_first">Newest First</string>
+    <string name="oldest_first">Oldest First</string>
+    <string name="showing_results">Showing %1$d cases</string>
+
+    <!-- Case Management -->
+    <string name="unassigned_cases">Unassigned</string>
+    <string name="my_cases_count">My Cases</string>
+    <string name="in_progress">In Progress</string>
+    <string name="assign_to_me">Assign to Me</string>
+    <string name="reassign">Reassign</string>
+    <string name="mark_complete">Mark Complete</string>
+    <string name="unassigned">Unassigned</string>
+
+    <!-- Service Constants -->
+    <string name="CHANNEL_ID_SOS">sos_channel</string>
+</resources>

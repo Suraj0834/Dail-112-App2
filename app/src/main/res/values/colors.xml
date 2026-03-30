@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Police Blue -->
+    <color name="primary">#1565C0</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="primary_light">#1E88E5</color>
+    <color name="primary_variant">#1976D2</color>
+    <color name="police_blue">#1565C0</color><!-- Same as primary for police-specific elements -->
+    
+    <!-- Accent Colors -->
+    <color name="accent">#90CAF9</color>
+    <color name="accent_dark">#42A5F5</color>
+    
+    <!-- Emergency Colors -->
+    <color name="emergency_red">#D32F2F</color>
+    <color name="emergency_red_dark">#B71C1C</color>
+    <color name="emergency_red_light">#EF5350</color>
+    
+    <!-- Warning/Alert Colors -->
+    <color name="warning_amber">#FF6F00</color>
+    <color name="warning_amber_light">#FFA726</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+    
+    <!-- Success Colors -->
+    <color name="success_green">#388E3C</color>
+    <color name="success_green_light">#4CAF50</color>
+    
+    <!-- Info Colors -->
+    <color name="info_blue">#0288D1</color>
+    <color name="info_blue_light">#03A9F4</color>
+    
+    <!-- Surface Colors (Dark Theme) -->
+    <color name="surface_dark">#121212</color>
+    <color name="surface_card">#1E1E1E</color>
+    <color name="surface_elevated">#2C2C2C</color>
+    <color name="surface_dialog">#383838</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#E0E0E0</color>
+    <color name="text_secondary">#9E9E9E</color>
+    <color name="text_disabled">#616161</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_dark">#FFFFFF</color>
+    <color name="text_white">#FFFFFF</color>
+    
+    <!-- Divider & Border -->
+    <color name="divider">#2C2C2C</color>
+    <color name="border">#3D3D3D</color>
+    
+    <!-- Background -->
+    <color name="background">#121212</color>
+    <color name="background_secondary">#1E1E1E</color>
+    
+    <!-- Status Colors -->
+    <color name="status_active">#4CAF50</color>
+    <color name="status_pending">#FF9800</color>
+    <color name="status_closed">#9E9E9E</color>
+    <color name="status_urgent">#F44336</color>
+    
+    <!-- Overlay -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#40FFFFFF</color>
+    
+    <!-- Ripple -->
+    <color name="ripple_light">#1AFFFFFF</color>
+    <color name="ripple_dark">#1A000000</color>
+    
+    <!-- SOS Button Gradient -->
+    <color name="sos_gradient_start">#D32F2F</color>
+    <color name="sos_gradient_end">#B71C1C</color>
+    
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+    <!-- res/values/colors.xml -->
+    <color name="card_background">#1E1E2E</color>
+    <color name="primary_gradient_start">#2C3E50</color>
+    <color name="primary_gradient_end">#1A2632</color>
+
+    <!-- Dark theme background -->
+    <color name="background_dark">#0A0E1A</color>
+
+    <!-- Additional colors for old module -->
+    <color name="warning_yellow">#FFB300</color>
+
+</resources>
